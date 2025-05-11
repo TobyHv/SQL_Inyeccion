@@ -44,3 +44,7 @@ Route::view('/track','/nivel3/orders/tracking');
 Route::view('/questions','/base/questions');
 Route::view('/add-opinion','/base/add-opinion');
 Route::view('/auth','/nivel3/auth');
+
+use App\Http\Controllers\AuthController;
+
+Route::post('/register', [AuthController::class, 'register'])->name('register');
